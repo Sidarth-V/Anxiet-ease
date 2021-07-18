@@ -1,0 +1,432 @@
+<html lang="en">
+  <head>
+    <style>
+      #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+  
+      #myImg:hover {
+        opacity: 0.7;
+      }
+  
+      /* The Modal (background) */
+      .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+      }
+  
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+  
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+  
+      /* Add Animation */
+      .modal-content,
+      #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+  
+      @-webkit-keyframes zoom {
+        from {
+          -webkit-transform: scale(0)
+        }
+  
+        to {
+          -webkit-transform: scale(1)
+        }
+      }
+  
+      @keyframes zoom {
+        from {
+          transform: scale(0)
+        }
+  
+        to {
+          transform: scale(1)
+        }
+      }
+  
+      /* The Close Button */
+      .close8 {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+  
+      .close8:hover,
+      .close8:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <meta charset="utf-8" />
+
+    <title>Cute Animal Pictures</title>
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Heebo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="animals.css" />
+
+    
+  </head>
+
+  <body>
+    <div class="e33_398">
+      <div class="e88_344">
+        <div class="e33_400"></div>
+        <div class="e33_401">
+          <div class="e33_402"><div class="e33_403">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="fb" src="images/facebook.png">
+            </a>
+          </div></div>
+          <div class="e33_404">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="ldin" src="images/linkedin.png">
+              </a>
+          </div>
+          <div class="e33_409"><div class="e33_410">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="twt" src="images/twitter.png">
+            </a>
+          </div></div>
+          <div class="e33_411">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <img class="ig" src="images/instagram.png">
+            </a>
+          </div>
+          <div class="e33_418">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              <img class="git" src="images/github.png" alt="">
+            </a>
+          </div>
+          <span class="e33_419">Follow us</span>
+        </div>
+        <div class="e33_420"></div>
+      </div>
+      <div class="e33_421">
+        
+        <div class="e33_422"></div>
+        <a href="https://www.youtube.com/watch?v=_u_bdjPsj5U" class="e33_423"><u>Cute Kittens</u></a>
+          <span class="e33_424">Cute dogs and cats doing funny things! Enjoy the funny cats reactions to different situations.</span>
+        <div class="e33_425"></div>
+        <div class="e33_426"></div>
+        <div class="ee33_425"></div>
+        <a href="https://www.youtube.com/watch?v=WNOBl1mtsMY" class="e33_427"><u>Cute Doggos</u></a>
+        <span class="e33_428">Watching funny baby dogs is the hardest try not to laugh challenge. Baby dogs are amazing pets because they are the cutest and most funny. It is funny and cute. This is the cutest and best video ever!   </span
+        ><span class="e33_430">Featured links</span>
+      </div>
+      <div class="e33_431">
+        <div class="e33_432"></div>
+        <span class="e33_434"
+          >Looking at photos and videos of adorable animals can significantly
+          reduce stress and relieve anxiety. Numerous studies have proven that
+          pets are powerful stress relief, lowering blood pressure and cortisol
+          while boosting 'happiness hormone' oxytocin. One study showed
+          increased endorphins and dopamine levels after just five
+          minutes.</span
+        ><span class="e33_435">Cute Animal Pictures</span>
+        <div class="e9_880"></div>
+        <div class="e58_282">
+          
+          <!-- AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
+
+
+
+        <button id="review-add-btn" aria-label="add review" title="Add Review"></button>
+        <div id="modal" role="dialog" aria-modal="true" aria-labelledby="add-review-header" class="">
+          <button class="close-btn" aria-label="close" title="Close">x</button>
+          <div id="review-form-container">
+            <h2 id="add-review-header">How are you feeling?</h2>
+            <form id="review-form">
+              <div class="fieldset">
+                <!-- <label for="reviewName">Name</label> -->
+                <!-- <input name="reviewName" id="reviewName" required=""> -->
+              </div>
+              <div class="fieldset">
+                <label>Rating</label>
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" onkeydown="navRadioGroup(event)"
+                    onfocus="setFocus(event)" required="">
+                  <label for="star5" title="5 stars">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" onkeydown="navRadioGroup(event)">
+                  <label for="star4" title="4 stars">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3" onkeydown="navRadioGroup(event)">
+                  <label for="star3" title="3 stars">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" onkeydown="navRadioGroup(event)">
+                  <label for="star2" title="2 stars">2 stars</label>
+                  <input type="radio" id="star1" value="1"
+                    onkeydown="navRadioGroup(event)" onfocus="setFocus(event)">
+                  <label for="star1" title="1 star">1 star</label>
+                </div>
+              </div>
+
+              <div class="fieldset">
+                <label for="reviewComments">Comments</label>
+                <textarea name="reviewComments" id="reviewComments" cols="20" rows="5" ></textarea>
+              </div>
+              <div class="fieldset right">
+                <button id="submit-review-btn">
+                  <a href="../activities/activities.html">Save</a> 
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-overlay"></div>
+
+
+        <script>
+          let focusedElementBeforeModal;
+          const modal = document.getElementById('modal');
+          const modalOverlay = document.querySelector('.modal-overlay');
+
+          window.onload = () => {
+            const addReview = document.getElementById('review-add-btn');
+            addReview.id = 'review-add-btn';
+            addReview.innerHTML = '<';
+            addReview.setAttribute('aria-label', 'add review');
+            addReview.title = 'Add Review';
+            addReview.addEventListener('click', openModal);
+            addReview.click();
+          }
+
+          const openModal = () => {
+            // Save current focus
+            focusedElementBeforeModal = document.activeElement;
+
+            // Listen for and trap the keyboard
+            modal.addEventListener('keydown', trapTabKey);
+
+            // Listen for indicators to close the modal
+            modalOverlay.addEventListener('click', closeModal);
+            // Close btn
+            const closeBtn = document.querySelector('.close-btn');
+            closeBtn.addEventListener('click', closeModal);
+
+            // submit form
+            const form = document.getElementById('review-form');
+            form.addEventListener('submit', submitAddReview, false);
+
+            // Find all focusable children
+            var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+            var focusableElements = modal.querySelectorAll(focusableElementsString);
+            // Convert NodeList to Array
+            focusableElements = Array.prototype.slice.call(focusableElements);
+
+            var firstTabStop = focusableElements[0];
+            var lastTabStop = focusableElements[focusableElements.length - 1];
+
+            // Show the modal and overlay
+            modal.classList.add('show');
+            modalOverlay.classList.add('show');
+
+            // Focus first child
+            // firstTabStop.focus();
+            const reviewName = document.getElementById('reviewName');
+            reviewName.focus();
+
+            function trapTabKey(e) {
+              // Check for TAB key press
+              if (e.keyCode === 9) {
+
+                // SHIFT + TAB
+                if (e.shiftKey) {
+                  if (document.activeElement === firstTabStop) {
+                    e.preventDefault();
+                    lastTabStop.focus();
+                  }
+
+                  // TAB
+                } else {
+                  if (document.activeElement === lastTabStop) {
+                    e.preventDefault();
+                    firstTabStop.focus();
+                  }
+                }
+              }
+
+              // ESCAPE
+              if (e.keyCode === 27) {
+                closeModal();
+              }
+            }
+          };
+
+          const submitAddReview = (e) => {
+            // console.log(e);
+            console.log('Form subbmitted!');
+            e.preventDefault();
+            closeModal();
+          };
+
+          const closeModal = () => {
+            // Hide the modal and overlay
+            modal.classList.remove('show');
+            modalOverlay.classList.remove('show');
+
+            const form = document.getElementById('review-form');
+            form.reset();
+            // Set focus back to element that had it before the modal was opened
+            focusedElementBeforeModal.focus();
+          };
+
+          const setFocus = (evt) => {
+            const rateRadios = document.getElementsByName('rate');
+            const rateRadiosArr = Array.from(rateRadios);
+            const anyChecked = rateRadiosArr.some(radio => { return radio.checked === true; });
+            // console.log('anyChecked', anyChecked);
+            if (!anyChecked) {
+              const star1 = document.getElementById('star1');
+              star1.focus();
+              // star1.checked = true;
+            }
+          };
+
+          const navRadioGroup = (evt) => {
+            // console.log('key', evt.key, 'code', evt.code, 'which', evt.which);
+            // console.log(evt);
+
+            const star1 = document.getElementById('star1');
+            const star2 = document.getElementById('star2');
+            const star3 = document.getElementById('star3');
+            const star4 = document.getElementById('star4');
+            const star5 = document.getElementById('star5');
+
+            if (['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(evt.key)) {
+              evt.preventDefault();
+              // console.log('attempting return');
+              if (evt.key === 'ArrowRight' || evt.key === 'ArrowDown') {
+                switch (evt.target.id) {
+                  case 'star1':
+                    star2.focus();
+                    star2.checked = true;
+                    break;
+                  case 'star2':
+                    star3.focus();
+                    star3.checked = true;
+                    break;
+                  case 'star3':
+                    star4.focus();
+                    star4.checked = true;
+                    break;
+                  case 'star4':
+                    star5.focus();
+                    star5.checked = true;
+                    break;
+                  case 'star5':
+                    star1.focus();
+                    star1.checked = true;
+                    break;
+                }
+              } else if (evt.key === 'ArrowLeft' || evt.key === 'ArrowUp') {
+                switch (evt.target.id) {
+                  case 'star1':
+                    star5.focus();
+                    star5.checked = true;
+                    break;
+                  case 'star2':
+                    star1.focus();
+                    star1.checked = true;
+                    break;
+                  case 'star3':
+                    star2.focus();
+                    star2.checked = true;
+                    break;
+                  case 'star4':
+                    star3.focus();
+                    star3.checked = true;
+                    break;
+                  case 'star5':
+                    star4.focus();
+                    star4.checked = true;
+                    break;
+                }
+              }
+            }
+          };
+        </script>
+        <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+
+
+        </div>
+      </div>
+      <div class="e33_436">
+        <div class="ei33_436_4_3"></div>
+        <div class="ei33_436_12_2003">
+          <div class="ei33_436_12_2004"></div>
+          <a href="animals.html#footer" class="ei33_436_12_2005">About</a>
+        </div>
+        <div class="ei33_436_1_41">
+          <div class="ei33_436_1_37">
+            <div class="ei33_436_1_38"></div>
+            <a href="../index.html#downloadid" class="ei33_436_1_39">Download</a>
+          </div>
+        </div>
+        <div class="ei33_436_1_36">
+          <div class="ei33_436_1_32"></div>
+          <a href="../profile/profile.html" class="ei33_436_1_33">Home</a>
+        </div>
+        <div class="ei33_436_4_7"></div>
+      </div>
+      <!-- <div class="e28_609">
+        <div class="e28_610"></div>
+        <a href="../profile/profile.html" class="e28_611 home">Home</a>
+      </div> -->
+    </div>
+  </body>
+</html>

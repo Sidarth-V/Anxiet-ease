@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close1 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close1:hover,
+        .close1:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close2 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close2:hover,
+        .close2:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close3 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close3:hover,
+        .close3:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close4 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close4:hover,
+        .close4:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close5 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close5:hover,
+        .close5:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close6 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close6:hover,
+        .close6:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close7 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close7:hover,
+        .close7:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close8 {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close8:hover,
+        .close8:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- lllll -->
+
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet" />
+    <link href="month.css" rel="stylesheet" />
+    <title>Monthly Progress</title>
+</head>
+
+<body>
+    <div class="v9_15">
+        <!-- header -->
+        <div class=e33_382>
+            <div class="ei33_382_4_3"></div>
+            <div class="eei33_382_12_2003">
+                <div class="ei33_382_12_2004">
+                    <a class="anc" href="../profile/profile.html">Home</a>
+                </div>
+                
+            </div>
+            <div class=ei33_382_12_2003>
+                <div class="ei33_382_12_2004"></div><a href="monthlycalendar.html#footer" class="ei33_382_12_2005">About</a>
+            </div>
+            <div class=ei33_382_1_41>
+                <div class=ei33_382_1_37>
+                    <div class="ei33_382_1_38"></div><a href="../index.html#downloadid" class="ei33_382_1_39">Download</a>
+                </div>
+            </div>
+            <div class=ei33_382_1_36>
+                <div class="ei33_382_1_32"></div><a href="../activities/activities.html"
+                    class="ei33_382_1_33">Activities</a>
+            </div>
+            <div class="ei33_382_4_7"></div>
+        </div>
+
+        <!-- header end -->
+        <div class="name"></div>
+        <div class="v88_280">
+
+            <div class="v12_2069">
+
+                <div class="v12_2078">
+                    <!-- <div class="v12_2070"><span class="v12_2071">M</span><span class="v12_2072">T</span><span
+                            class="v12_2073">W</span><span class="v12_2074">T</span><span class="v12_2075">F</span><span
+                            class="v12_2076">S</span><span class="v12_2077">S</span></div> -->
+                    <img class="days" src="./images/days of the week.png" alt="">
+                    <div class="v12_2079">
+                        <div class="v12_2080">
+                            <div class="v12_2907"><span class="v12_2908"></span></div>
+                        </div>
+                        <div class="v12_2082">
+                            <div class="v12_2905"><span class="v12_2906"></span></div>
+                        </div>
+                        <div class="v12_2903"><span class="v12_2904">01</span></div>
+                        <div class="v12_2818">
+                            <div class="v12_2835"><span class="v12_2836">02</span></div>
+                        </div>
+                        <div class="v9_614">
+                            <div class="v9_615"><span class="v9_616">03</span></div>
+                        </div>
+                        <div class="v9_611">
+                            <!-- <span class="v9_612">04</span><span class="v9_613">Yoga</span> -->
+                             <!-- 4th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg8" src="images/day4.png" z-index="0" width="300"
+                                height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal8" class="modal">
+                                <span class="close8">×</span>
+                                <img class="modal-content" id="img8" src="./images/Yoga.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal8 = document.getElementById('myModal8');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img8 = document.getElementById('myImg8');
+                                var modalImg8 = document.getElementById("./images/Yoga.png");
+                                var captionText = document.getElementById("caption");
+                                img8.onclick = function () {
+                                    modal8.style.display = "block";
+                                    modalImg8.src = this.src;
+                                    modalImg8.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span8 = document.getElementsByClassName("close8")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span8.onclick = function () {
+                                    modal8.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 4th day of the month -->
+                        
+                        </div>
+                        <div class="v12_2800"><span class="v12_2801">05</span></div>
+                    </div>
+                    <div class="v12_2089">
+                        <div class="v12_2767">
+
+
+                            <!-- 6th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg7" src="images/day6.png" z-index="0" width="300"
+                                height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal7" class="modal">
+                                <span class="close7">×</span>
+                                <img class="modal-content" id="img7" src="./images/Exercise.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal7 = document.getElementById('myModal7');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img7 = document.getElementById('myImg7');
+                                var modalImg7 = document.getElementById("./images/Exercise.png");
+                                var captionText = document.getElementById("caption");
+                                img7.onclick = function () {
+                                    modal7.style.display = "block";
+                                    modalImg7.src = this.src;
+                                    modalImg7.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span7 = document.getElementsByClassName("close7")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span7.onclick = function () {
+                                    modal7.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 6th day of the month -->
+                            <!-- <div class="v12_2779"><span class="v12_2780">06</span><span class="v12_2775">Exercise</span>
+                            </div> -->
+                            <!-- <div class="v12_2769">
+                                <div class="v12_2770"></div>
+                            </div> -->
+                        </div>
+                        <div class="v9_555">
+
+                             <!-- 7th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg6" src="images/day7.png" z-index="0" width="300"
+                                height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal6" class="modal">
+                                <span class="close6">×</span>
+                                <img class="modal-content" id="img06" src="./images/Music.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal6 = document.getElementById('myModal6');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img6 = document.getElementById('myImg6');
+                                var modalImg6 = document.getElementById("./images/Music.png");
+                                var captionText = document.getElementById("caption");
+                                img6.onclick = function () {
+                                    modal6.style.display = "block";
+                                    modalImg6.src = this.src;
+                                    modalImg6.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span6 = document.getElementsByClassName("close6")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span6.onclick = function () {
+                                    modal6.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 7th day of the month -->
+
+                            <!-- <div class="v9_556"><span class="v9_557">07</span><span class="v9_558">Music</span></div> -->
+                        </div>
+                        <div class="v9_561">
+
+                            <!-- 8th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg5" src="images/day8.png" z-index="0" width="300"
+                                height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal5" class="modal">
+                                <span class="close5">×</span>
+                                <img class="modal-content" id="img05" src="./images/Animalpics1.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal5 = document.getElementById('myModal5');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img5 = document.getElementById('myImg5');
+                                var modalImg5 = document.getElementById("./images/Animalpics1.png");
+                                var captionText = document.getElementById("caption");
+                                img5.onclick = function () {
+                                    modal5.style.display = "block";
+                                    modalImg5.src = this.src;
+                                    modalImg5.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span5 = document.getElementsByClassName("close5")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span5.onclick = function () {
+                                    modal5.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 8th day of the month -->
+
+                            <!-- <div class="v9_562"><span class="v9_563">08</span><span class="v9_564">Animal
+                                    Pictures</span></div>
+                            <div class="v9_565">
+                                <div class="v9_566"></div>
+                            </div> -->
+                        </div>
+
+                        <div class="v12_2658">
+
+                            <!-- 9th day of the month -->
+
+                               <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg4" src="images/day9.png" z-index="0" width="300" height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal4" class="modal">
+                                <span class="close4">×</span>
+                                <img class="modal-content" id="img04" src="./images/Cooking4.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal4 = document.getElementById('myModal4');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img4 = document.getElementById('myImg4');
+                                var modalImg4 = document.getElementById("./images/Cooking4.png");
+                                var captionText = document.getElementById("caption");
+                                img4.onclick = function () {
+                                    modal4.style.display = "block";
+                                    modalImg4.src = this.src;
+                                    modalImg4.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span4 = document.getElementsByClassName("close4")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span4.onclick = function () {
+                                    modal4.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+                            <!-- 9th day of the month -->
+                            <!-- <div class="v12_2670"><span class="v12_2671">09</span><span class="v12_2666">Cooking</span>
+                            </div>
+                            <div class="v12_2660">
+                                <div class="v12_2661"></div>
+                            </div> -->
+                        </div>
+
+                        
+
+                        <div class="v9_573">
+                            <!-- <div class="v9_574"><span class="v9_575">10</span><span class="v9_576">Animal
+                                    Pictures</span></div>
+                            <div class="v9_577">
+                                <div class="v9_578"></div>
+                            </div> -->
+
+
+                            <!-- 10th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg3" src="images/day10.png" z-index="0" width="300" height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal3" class="modal">
+                                <span class="close3">×</span>
+                                <img class="modal-content" id="img03" src="./images/Animalpics.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal3 = document.getElementById('myModal3');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img3 = document.getElementById('myImg3');
+                                var modalImg3 = document.getElementById("./images/Animalpics.png");
+                                var captionText = document.getElementById("caption");
+                                img3.onclick = function () {
+                                    modal3.style.display = "block";
+                                    modalImg3.src = this.src;
+                                    modalImg3.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span3 = document.getElementsByClassName("close3")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span3.onclick = function () {
+                                    modal3.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 10th day of the month -->
+
+                        </div>
+                        <div class="v9_593">
+                            <!-- <div class="v9_594">
+                                <span class="v9_595">11</span><span class="v9_596">Cooking</span></div>
+                            <div class="v9_597">
+                                <div class="v9_598"></div>
+                            </div> -->
+
+                            <!-- 11th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg2" src="images/day11.png" z-index="0" width="300" height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal2" class="modal">
+                                <span class="close2">×</span>
+                                <img class="modal-content" id="img02" src="./images/Cooking2.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal2 = document.getElementById('myModal2');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img2 = document.getElementById('myImg2');
+                                var modalImg2 = document.getElementById("./images/Cooking2.png");
+                                var captionText = document.getElementById("caption");
+                                img2.onclick = function () {
+                                    modal2.style.display = "block";
+                                    modalImg2.src = this.src;
+                                    modalImg2.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span2 = document.getElementsByClassName("close2")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span2.onclick = function () {
+                                    modal2.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 11th day of the month -->
+
+                        </div>
+                        <div class="v9_585">
+
+                            <!-- 12th day of the month -->
+
+                            <!-- <div class="v9_594" z-index="-1"><span class="v9_595">12</span><span class="v9_596">Cooking</span></div> -->
+                            <img class="myImg" id="myImg1" src="images/Group 7.png" z-index="0" width="300"
+                                height="200">
+
+                            <!-- The Modal -->
+                            <div id="myModal1" class="modal">
+                                <span class="close1">×</span>
+                                <img class="modal-content" id="img01" src="./images/Cooking3.png">
+                                <div id="caption"></div>
+                            </div>
+
+                            <script>
+                                // Get the modal
+                                var modal1 = document.getElementById('myModal1');
+
+                                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                                var img1 = document.getElementById('myImg1');
+                                var modalImg1 = document.getElementById("./images/Cooking3.png");
+                                var captionText = document.getElementById("caption");
+                                img1.onclick = function () {
+                                    modal1.style.display = "block";
+                                    modalImg1.src = this.src;
+                                    modalImg1.alt = this.alt;
+                                    captionText.innerHTML = this.alt;
+                                }
+
+                                // Get the <span> element that closes the modal
+                                var span1 = document.getElementsByClassName("close1")[0];
+
+                                // When the user clicks on <span> (x), close the modal
+                                span1.onclick = function () {
+                                    modal1.style.display = "none";
+                                }
+                            </script>
+                            <!-- <div class="v9_586">
+                                <div id="cook" class="v9_588">Cooking</div>
+                            </div> -->
+
+
+
+                            <!-- 12th day of the month -->
+
+                            <div class="v9_589">
+                                <div class="v9_590"></div>
+                            </div><span class="v12_3487">12</span>
+                        </div>
+                    </div>
+                    <div class="v12_2097">
+                        <div class="v12_2578"><span class="v12_2579">13</span></div>
+                        <div class="v12_2576"><span class="v12_2577">14</span></div>
+                        <div class="v12_2574"><span class="v12_2575">15</span></div>
+                        <div class="v12_2572"><span class="v12_2573">16</span></div>
+                        <div class="v12_2570"><span class="v12_2571">17</span></div>
+                        <div class="v12_2513">
+                            <div class="v12_2530"></div><span class="v9_387">18</span>
+                        </div>
+                        <div class="v12_2497"><span class="v12_2498">19</span></div>
+                    </div>
+                    <div class="v12_2105">
+                        <div class="v12_2495"><span class="v12_2496">20</span></div>
+                        <div class="v12_2493"><span class="v12_2494">21</span></div>
+                        <div class="v12_2455"><span class="v9_617">22</span></div>
+                        <div class="v12_2424"><span class="v12_2425">23</span></div>
+                        <div class="v12_2422"><span class="v12_2423">24</span></div>
+                        <div class="v12_2420"><span class="v12_2421">25</span></div>
+                        <div class="v12_2418"><span class="v12_2419">26</span></div>
+                    </div>
+                    <div class="v12_2113">
+                        <div class="v12_2114">
+                            <div class="v12_2115">
+                                <div class="v12_2416"><span class="v12_2417">27</span></div>
+                                <div class="v12_2414"><span class="v12_2415">28</span></div>
+                                <div class="v12_2412"><span class="v12_2413">29</span></div>
+                                <div class="v12_2410"><span class="v12_2411">30</span></div>
+                                <div class="v12_2408"><span class="v12_2409">31</span></div>
+                            </div>
+                            <div class="v12_2121">
+                                <div class="v12_2406"><span class="v12_2407">29</span></div>
+                            </div>
+                            <div class="v12_2123">
+                                <div class="v12_2404"><span class="v12_2405">29</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div><span class="v12_2125">July 2021</span><a href="../weeklycalendar/weekcalendar.html"class="v12_3488">Switch to weekly view</a>
+                <div class="v9_740">
+                    <div class="v9_741">
+                        <div class="v9_742">
+                            <div class="v9_743"></div>
+                        </div>
+                    </div>
+                    <div class="v9_744">
+                        <div class="v9_745">
+                            <div class="v9_746"></div>
+                        </div>
+                    </div>
+                    <div class="v9_747">
+                        <div class="v9_748">
+                            <div class="v9_749"></div>
+                        </div>
+                    </div><span class="v9_750">Anxiety has been reduced by activity</span><span class="v9_751">A
+                        predicted/previous attack has been avoided</span><span class="v9_752">Activity did not help
+                        significantly</span>
+                    <!-- <div class="v34_293"></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="name"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="e28_632">
+        <div id="footer" class="e33_454"></div>
+
+
+        <div class=e33_455>
+            <span class="e33_473">Follow us</span>
+            <div class=e33_456>
+                <div class="e33_457">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="fb" src="./images/facebook.png">
+                    </a>
+                </div>
+            </div>
+            <div class=e33_458>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img class="ldin" src="./images/linkedin.png">
+                </a>
+
+            </div>
+            <div class=e33_463>
+                <div class="e33_464">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="twt" src="./images/twitter.png">
+                    </a>
+                </div>
+            </div>
+            <div class=e33_465>
+                <div class=e33_466>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                        <img class="ig" src="./images/instagram.png">
+                    </a>
+                </div>
+            </div>
+            <div class="e33_472">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                    <img class="git" src="./images/github.png">
+                </a>
+            </div>
+        </div>
+        <div class="e33_474"></div>
+    </div>
+
+</body>
+
+</html>
