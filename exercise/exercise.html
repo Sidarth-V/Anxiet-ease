@@ -110,6 +110,9 @@
             <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
             <link rel="stylesheet" href="exercise.css">
          
@@ -244,9 +247,13 @@
                 <textarea name="reviewComments" id="reviewComments" cols="20" rows="5" ></textarea>
               </div>
               <div class="fieldset right">
+                
                 <button id="submit-review-btn">
-                  <a href="../activities/activities.html">Save</a> 
+                  <a href="../activities/activities.html">
+                  Save
+                </a>
                 </button>
+                 
               </div>
             </form>
           </div>
@@ -260,6 +267,11 @@
           const modalOverlay = document.querySelector('.modal-overlay');
 
           window.onload = () => {
+            const addReview = document.getElementById('review-add-btn');
+            addReview.id = 'review-add-btn';
+            addReview.innerHTML = '<';
+          }
+          document.getElementById('review-add-btn').onclick = () => {
             const addReview = document.getElementById('review-add-btn');
             addReview.id = 'review-add-btn';
             addReview.innerHTML = '<';

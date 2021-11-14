@@ -239,6 +239,11 @@
             const addReview = document.getElementById('review-add-btn');
             addReview.id = 'review-add-btn';
             addReview.innerHTML = '<';
+          }
+          document.getElementById('review-add-btn').onclick = () => {
+            const addReview = document.getElementById('review-add-btn');
+            addReview.id = 'review-add-btn';
+            addReview.innerHTML = '<';
             addReview.setAttribute('aria-label', 'add review');
             addReview.title = 'Add Review';
             addReview.addEventListener('click', openModal);

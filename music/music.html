@@ -117,6 +117,9 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="music.css" />
   </head>
@@ -293,14 +296,19 @@
             const modalOverlay = document.querySelector(".modal-overlay");
 
             window.onload = () => {
-              const addReview = document.getElementById("review-add-btn");
-              addReview.id = "review-add-btn";
-              addReview.innerHTML = "<";
-              addReview.setAttribute("aria-label", "add review");
-              addReview.title = "Add Review";
-              addReview.addEventListener("click", openModal);
-              addReview.click();
-            };
+            const addReview = document.getElementById('review-add-btn');
+            addReview.id = 'review-add-btn';
+            addReview.innerHTML = '<';
+          }
+          document.getElementById('review-add-btn').onclick = () => {
+            const addReview = document.getElementById('review-add-btn');
+            addReview.id = 'review-add-btn';
+            addReview.innerHTML = '<';
+            addReview.setAttribute('aria-label', 'add review');
+            addReview.title = 'Add Review';
+            addReview.addEventListener('click', openModal);
+            addReview.click();
+          }
 
             const openModal = () => {
               // Save current focus
