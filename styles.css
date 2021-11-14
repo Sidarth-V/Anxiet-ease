@@ -12,7 +12,14 @@ body{
 	width: 1440px;
 	height:2650px;
 }
+body{
+    margin: 0;
+}
 
+div{
+    width: 100vw;
+    height: 100vh;
+}
 .e1_10 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:1440px;
