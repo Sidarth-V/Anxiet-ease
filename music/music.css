@@ -5,7 +5,11 @@ a{
 .e33_290 { 
 	overflow:hidden;
 }
-
+body{
+	zoom: 0.876;
+    -moz-transform: scale(2);
+    -moz-transform-origin: 0 0;
+}
 .e33_452 { 
 	overflow:hidden;
 }

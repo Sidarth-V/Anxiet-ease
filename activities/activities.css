@@ -8,6 +8,9 @@
 	position:absolute;
 }
 body{
+	zoom: 0.876;
+    -moz-transform: scale(2);
+    -moz-transform-origin: 0 0;
 	width: 1440px;
 	height: 2967px;
 }

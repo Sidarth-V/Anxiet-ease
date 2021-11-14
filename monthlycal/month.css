@@ -4,6 +4,10 @@
 body {
   font-size: 14px;
   width: 1442px;
+  zoom: 0.876;
+  -moz-transform: scale(2);
+  -moz-transform-origin: 0 0;
+  
 }
 .anc{
   color: #fff;
